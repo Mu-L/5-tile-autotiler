@@ -21,6 +21,21 @@ Also adds the ShuffleMapLayer class, which has more basic randomizing features f
 * Press the 'update' tool button in the AutoMapLayer's properties.
 * Viola!
 
+## Live Drawing
+
+In Editor:
+* Select the AutoMap you'd like to draw with.
+* In the "In-Editor Drawing" section, modify your "Draw"/"Erase"/"Disable" keyboard inputs.
+* Enable the Draw Mode checkbox. While enabled, your "Draw"/"Erase" keyboard inputs will perform those operations at your mouse pointer location. The "Disable" input will toggle the checkbox off.
+* You can deselect the AutoMap and keep draw mode on. This allows you to work without the "focus" effect that comes from selecting a TileMapLayer.
+* Multiple AutoMaps can have Draw Mode enabled at the same time. Set up your layers with different "Draw"/"Erase" keyboard inputs for an efficient workflow!
+
+In Game:
+* The AutoMap demo scene (res://addons/5tile/5tile_demo.tscn), which shows off example AutoMap configurations, now has in-game drawing set up.
+* This requires "click_left" and "click_right" inputs in the Input Map, used for drawing and erasing respectively.
+* Cycle between layers with "ui_accept" (e.g. SpaceBar)
+* Programatically tallies up the AutoMaps at runtime, meaning you can add your own AutoMaps and seamlessly integrate them w/this system if they follow the existing format.
+
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details
